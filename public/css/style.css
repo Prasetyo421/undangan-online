@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .button {
+        @apply text-sm text-white py-1 px-6 rounded-md;
+    }
+
+    .card {
+        @apply bg-pink-300 rounded-md;
+    }
+}
