@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/design2.css">
 
     <style>
         html {
@@ -16,11 +17,11 @@
 </head>
 <body>
     {{-- container --}}
-    <div class="relative">
+    <div class="relative w-screen pb-96 md:pb-32">
         {{-- bottom nav --}}
-        <div class="fixed w-full bottom-0">
+        <div class="fixed w-full bottom-0 z-40">
             <div onClick="togglePlay()" class="absolute right-5 bottom-24 rounded-lg bg-blue-400 border-2 border-blue-300 hover:cursor-pointer" >
-                <img id="audioIcon" src="/icon/play.svg" class="w-12 h-12" alt="">
+                <img id="audioIcon" src="/icon/play.svg" class="w-12 h-12" alt="audio">
                 <audio id="audio" src="/audio/wedding audio1.mp3" preload="auto"></audio>
             </div>
     
@@ -52,36 +53,46 @@
         {{-- end bottom nav --}}
 
         {{-- beranda --}}
-        <div class="flex h-screen w-full mb-10">
-            {{-- cover image --}}
-            <div class="w-8/12 ">
-                <img src="/img/wedding-g1665d32ca_1920.jpg" alt="cover" class="h-full">
+        <div class="h-screen w-screen mb-10 ">
+            <div class="md:flex md:h-4/5 md:w-full block h-auto">
+                {{-- cover image --}}
+                <div class="w-full md:w-8/12 md:h-full">
+                    <img src="/img/wedding-g1665d32ca_1920.jpg" alt="cover" class="h-full w-full">
+                </div>
+    
+                {{-- info mempelai --}}
+                <div class="h-2/5 bg-blue-400 pt-12 md:w-4/12 md:h-full pb-52">
+                    <div class="text-white mx-auto text-center">
+                        <p class="text-xl mb-2">undangan pernikahan</p>
+                        <p class="text-4xl mb-4">Aisyah & Dias</p>
+                        <p class="text-xl">27 November 2021</p>
+                    </div>
+                </div>
             </div>
 
-            {{-- info mempelai --}}
-            <div class="w-4/12 bg-blue-400 flex items-center">
-                <div class="text-white mx-auto text-center">
-                    <p class="text-xl mb-2">undangan pernikahan</p>
-                    <p class="text-4xl mb-4">Aisyah & Dias</p>
-                    <p >27 November 2021</p>
-                </div>
+            <div class="custom-shape-divider-bottom-1635423095 -mt-14">
+                <svg class="h-40 w-full text-black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill "></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
             </div>
         </div>
 
         {{-- couple --}}
-        <div id="couple" class="h-screen">
+        <div id="couple" class="min-h-screen">
             <h1 class="text-4xl text-center mb-7 font-bold">mempelai</h1>
-            <div class="flex">
+            <div class="md:flex">
                 {{-- groom --}}
-                <div class="w-1/2 text-center">
-                    <img src="/img/wedding-g1665d32ca_1920.jpg" alt="groom" class="rounded-full h-44 w-44 flex items-center justify-center border-4 border-blue-300 mx-auto mb-7">
+                <div class="text-center mx-auto mb-20">
+                    <img src="/img/wedding-g1665d32ca_1920.jpg" alt="groom" class="rounded-full h-60 w-60 flex items-center justify-center border-4 border-blue-300 mx-auto mb-7">
                     <p class="text-3xl font-bold mb-2">Dias Taufik Rahman</p>
-                    <p>Putra dari Bapak Ibu Dias & Ibu Bapak Dias</p>
+                    <p class="text-xl">Putra dari Bapak Ibu Dias & Ibu Bapak Dias</p>
                 </div>
                 
                 {{-- bride --}}
-                <div class="w-1/2 text-center">
-                    <img src="/img/wedding-g1665d32ca_1920.jpg" alt="bride" class="rounded-full h-44 w-44 flex items-center justify-center border-4 border-blue-300 mx-auto mb-7">
+                <div class="text-center mx-auto mb-20">
+                    <img src="/img/wedding-g1665d32ca_1920.jpg" alt="groom" class="rounded-full h-60 w-60 flex items-center justify-center border-4 border-blue-300 mx-auto mb-7">
                     <p class="text-3xl font-bold mb-2">Azalia Fasya</p>
                     <p>dari Bapak Ibu Azalia & Ibu Bapak Azalia</p>
                 </div>
@@ -89,29 +100,33 @@
         </div>
 
         {{-- count down --}}
-        <div class="h-screen text-center">
-            <p class="text-4xl mb-12">menghitung hari</p>
-            <div class="flex justify-around">
-                <div>
-                    <p id="days" class="text-4xl font-bold"></p>
-                    <p>hari</p>
+        <div class="h-screen ">
+            <p class="text-5xl mb-40 text-center">menghitung hari</p>
+            <div class="w-full md:flex md:justify-around">
+                <div class="flex justify-around mb-10 md:w-1/2">
+                    <div class="md:inline">
+                        <p id="days" class="text-5xl font-bold mb-4"></p>
+                        <p class="text-center text-3xl">hari</p>
+                    </div>
+                    <div class="md:inline">
+                        <p id="hours" class="text-5xl font-bold mb-4"></p>
+                        <p class="text-center text-3xl">jam</p>
+                    </div>
                 </div>
-                <div>
-                    <p id="hours" class="text-4xl font-bold"></p>
-                    <p>jam</p>
-                </div>
-                <div>
-                    <p id="minutes" class="text-4xl font-bold"></p>
-                    <p>menit</p>
-                </div>
-                <div>
-                    <p id="seconds" class="text-4xl font-bold"></p>
-                    <p>detik</p>
+                <div class="flex justify-around mb-10 md:w-1/2">
+                    <div>
+                        <p id="minutes" class="text-5xl font-bold mb-4"></p>
+                        <p class="text-center text-3xl">menit</p>
+                    </div>
+                    <div>
+                        <p id="seconds" class="text-5xl font-bold mb-4"></p>
+                        <p class="text-center text-3xl">detik</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="location" class=" w-11/12 mx-auto shadow-2xl p-7 mb-14 rounded-md">
+        <div id="location" class="w-11/12 mx-auto shadow-2xl p-7 mb-14 rounded-md">
             {{-- wedding --}}
             <div class="text-center mb-10">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -145,39 +160,39 @@
             </div>
 
             {{-- map --}}
-            <div id="google-map" class="h-screen">
+            <div id="google-map" class="h-56 md:h-screen">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.191862195739!2d106.82138923819227!3d-6.179250294716707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f42ba64860c1%3A0x7849b1ee855c7c71!2sGedung%20Sapta%20Pesona!5e0!3m2!1sid!2sid!4v1635383903533!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
 
         {{-- guest book --}}
-        <div id="guest-book" class="h-screen">
+        <div id="guest-book" class="h-screen  p-5">
             <p class="text-4xl font-bold text-center">Buku Tamu</p>
             <p class="mb-10 text-center">Yuk kirim ucapan, doa serta konfirmasi kehadiran</p>
-            <div class="flex justify-center">
-                    <div class=" h-96 w-5/12 overflow-scroll mr-9 p-5">
-                        <div class="mb-4 p-4 pt-1 shadow-lg">
-                            <p class="font-bold text-blue-400">keysha</p>
-                            <p class="mb-2">7 bulan yang lalu</p>
-                            <p>Selamat yaaa semoga dilancarkan sampai hari H nyaa. aamiiin</p>
-                            <p>Hadir</p>
-                        </div>
-                        <div class="mb-4 p-4 pt-1 shadow-lg">
-                            <p class="font-bold text-blue-400">keysha</p>
-                            <p class="mb-2">7 bulan yang lalu</p>
-                            <p>Selamat yaaa semoga dilancarkan sampai hari H nyaa. aamiiin</p>
-                            <p>Hadir</p>
-                        </div>
-                        <div class="mb-4 p-4 pt-1 shadow-lg">
-                            <p class="font-bold text-blue-400">keysha</p>
-                            <p class="mb-2">7 bulan yang lalu</p>
-                            <p>Selamat yaaa semoga dilancarkan sampai hari H nyaa. aamiiin</p>
-                            <p>Hadir</p>
-                        </div>
+            <div class="md:flex md:justify-center">
+                <div class="w-full md:h-96 md:w-5/12 overflow-scroll mb-10">
+                    <div class="mb-4 p-4 pt-1 shadow-lg">
+                        <p class="font-bold text-blue-400">keysha</p>
+                        <p class="mb-2">7 bulan yang lalu</p>
+                        <p>Selamat yaaa semoga dilancarkan sampai hari H nyaa. aamiiin</p>
+                        <p>Hadir</p>
                     </div>
-                <div class="w-5/12">
+                    <div class="mb-4 p-4 pt-1 shadow-lg">
+                        <p class="font-bold text-blue-400">keysha</p>
+                        <p class="mb-2">7 bulan yang lalu</p>
+                        <p>Selamat yaaa semoga dilancarkan sampai hari H nyaa. aamiiin</p>
+                        <p>Hadir</p>
+                    </div>
+                    <div class="mb-4 p-4 pt-1 shadow-lg">
+                        <p class="font-bold text-blue-400">keysha</p>
+                        <p class="mb-2">7 bulan yang lalu</p>
+                        <p>Selamat yaaa semoga dilancarkan sampai hari H nyaa. aamiiin</p>
+                        <p>Hadir</p>
+                    </div>
+                </div>
+                <div class="md:w-5/12 w-full text-center">
                     <input type="hidden" name="invitation_id" value="">
-                    <div>
+                    <div class="mb-7">
                         <label for="name" class="block">name</label>
                         <input type="text" name="name" id="name" class="@error('name') border-red-500 @enderror" value="{{ old('name') }}">
                     </div>
@@ -238,8 +253,8 @@
 
         var myAudio = document.getElementById("audio");
         var audioIcon = document.getElementById("audioIcon");
+        myAudio.loop = true;
 
-        myAudio.play();
         function togglePlay() {
             return myAudio.paused ? audioPlay() : audioPause();
         };
@@ -253,6 +268,8 @@
             myAudio.pause();
             audioIcon.src = "/icon/pause.svg";
         }
+
+        togglePlay();
     </script>
 
 </body>
