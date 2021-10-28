@@ -12,6 +12,11 @@
   <div class="container:xl mx-auto">
 
     @include('layouts.nav')
+
+    {{-- whatsapp --}}
+    <div class="fixed bottom-5 right-5 rounded-full h-16 w-16 flex items-center justify-center bg-green-500"> 
+      <img src="/icon/whatsapp.svg" alt="whatsapp">
+    </div>
     
     {{-- beranda --}}
     <div class="beranda">
@@ -82,7 +87,7 @@
           <p>Lorem ipsum dolor sit amet.</p>
         </div>
 
-        <a href="#" class="inline-block px-5 py-2 rounded-md border-2 hover:text-blue-300 hover:bg-white border-blue-300 bg-blue-300 text-white">Pilih Paket</a>
+        <a href="#" class="inline-block px-5 py-2 rounded-md border-2 hover:text-blue-300 hover:bg-white border-blue-300 bg-blue-400 text-white">Pilih Paket</a>
       </div>
       
     </div>
