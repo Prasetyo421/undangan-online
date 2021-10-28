@@ -6,6 +6,7 @@ use App\Models\GuestBook;
 use App\Models\Invitations;
 use Illuminate\Http\Request;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
+use DateTime;
 use Illuminate\Support\Facades\Storage;
 
 class InvitationsController extends Controller
@@ -92,8 +93,18 @@ class InvitationsController extends Controller
         $userId = auth()->check() ? auth()->user()->id : -1;
         $isAdmin = auth()->check() ? auth()->user()->admin : -1;
         if ($invitation->is_active || $invitation->user_id == $userId || $isAdmin > 0) {
-
             $invitation['guest_books'] = GuestBook::latest()->where('invitation_id', $invitation->id)->get();
+            $invitation['day'] = date('l', strtotime($invitation['wedding_date']));
+
+            $invitation['wedding_date'] = date('d F Y', strtotime($invitation['wedding_date']));
+            $invitation['wedding_time_start'] = date('H:i', strtotime($invitation['wedding_time_start']));
+            $invitation['wedding_time_end'] = date('H:i', strtotime($invitation['wedding_time_end']));
+
+            $invitation['reseption_date'] = date('d F Y', strtotime($invitation['wedding_date']));
+            $invitation['reseption_time_start'] = date('H:i', strtotime($invitation['reseption_time_start']));
+            $invitation['reseption_time_end'] = date('H:i', strtotime($invitation['reseption_time_end']));
+
+            // ddd($invitation['wedding_date']);
 
             return view('design.design' . $invitation->design_id, [
                 'invitation' => $invitation

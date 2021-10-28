@@ -37,7 +37,8 @@ Route::get('dashboard/show/{invitation}', [DashboardController::class, 'show'])-
 
 Route::get('/test', function () {
     // return view('test.index');
-    return view('dashboard.layouts.main');
+    // return view('dashboard.layouts.main');
+    return view('design.design2');
 });
 
 require __DIR__ . '/auth.php';

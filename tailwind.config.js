@@ -26,6 +26,7 @@ module.exports = {
             opacity: ['disabled'],
             display: ['group-hover'],
             borderWidth: ['group-hover'],
+            cursor: ['hover']
         },
     },
 

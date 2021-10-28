@@ -18,7 +18,7 @@
         <div id="beranda" class="h-screen text-center border-b-8 border-pink-300 pt-14">
             <h1 class="text-2xl">
                 We’re Getting Married<br>
-                {{ $invitation->wedding_date }}
+                {{ $invitation->day . ', ' . $invitation->wedding_date }}
             </h1>
             <h1 class="text-5xl mb-7">
                 {{ $invitation->groom_name . ' & ' . $invitation->bride_name }}
