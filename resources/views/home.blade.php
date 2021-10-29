@@ -14,7 +14,7 @@
     @include('layouts.nav')
 
     {{-- whatsapp --}}
-    <div class="fixed bottom-5 right-5 rounded-full h-16 w-16 flex items-center justify-center bg-green-500"> 
+    <div class="fixed bottom-5 right-5 rounded-full h-16 w-16 flex items-center justify-center bg-green-500 hover:cursor-pointer z-10"> 
       <img src="/icon/whatsapp.svg" alt="whatsapp">
     </div>
     
